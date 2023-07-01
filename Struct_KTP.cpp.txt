@@ -1,0 +1,82 @@
+/*Nama : Imran Sihaloho*/
+
+
+
+/*1. Apa itu Struct?
+Struct atau tipe data struktur merupakan pengembangan dari array. Struct dapat digunakan 
+untuk berbagai tipe data yang berbeda. Sebagai contoh, sebuah record mengenai suatu 
+produk, terdiri dari kode produk, nama produk, harga produk dsb. Semua data tersebut 
+dihimpun dalam satu record.
+
+2. Tipe Data apa saja yang dapat ditampung pada struct?
+Berbeda dengan array yang hanya dapat menampung satu/lebih tipe data, namun harus sama
+struct dapat menampung berbagai macam tipe data yang berbeda sesuai dengan kebutuhan penggunanya
+
+3. Program Struct KTP*/
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+using namespace std;
+
+//Deklarasi struct
+struct data_ktp
+{
+	int NIK;
+	char Nama[50], Tempat_Tgl_Lahir[100], Jenis_Kelamin[10], 
+	Alamat[30], Rt_Rw[7], Kel_Desa[20], Kecamatan[20], 
+	Agama[10], St_pk[12], Pekerjaan[30], Kewarganegaraan[3];
+
+};
+
+//Deklarasi variabel struct
+data_ktp ktp1;
+
+int main()
+{
+	//input data
+	cout<<"\tInput Data KTP \n";
+	cout<<"---------------------------"<<endl;
+	cout<<"NIK	\t\t: "; cin>>ktp1.NIK;
+	fflush(stdin);
+	cout<<"Nama	\t\t: "; cin>>ktp1.Nama;
+	fflush(stdin);
+	cout<<"Tempat/Tgl Lahir	: "; cin>>ktp1.Tempat_Tgl_Lahir;
+	fflush(stdin);
+	cout<<"Jenis Kelamin\t	: "; cin>>ktp1.Jenis_Kelamin;
+	fflush(stdin);
+	cout<<"Alamat			: "; cin>>ktp1.Alamat;
+	fflush(stdin);
+	cout<<"RT/RW			: "; cin>>ktp1.Rt_Rw;
+	fflush(stdin);
+	cout<<"Kel/Desa		: "; cin>>ktp1.Kel_Desa;
+	fflush(stdin);
+	cout<<"Kecamatan		: ";cin>>ktp1.Kecamatan;
+	fflush(stdin);
+	cout<<"Agama			: ";cin>>ktp1.Agama;
+	fflush(stdin);
+	cout<<"Status Perkawinan	: ";cin>>ktp1.St_pk;
+	fflush(stdin);
+	cout<<"Pekerjaan		: ";cin>>ktp1.Pekerjaan;
+	fflush(stdin);
+	cout<<"Kewarganegaraan		: ";cin>>ktp1.Kewarganegaraan;
+	cout<<"\n\n";
+	
+	//output data
+	cout<<"\tInput Data KTP \n";
+	cout<<"----------------------------"<<endl;
+	cout<<"NIK	\t\t: "<<ktp1.NIK<<endl; 
+	cout<<"Nama	\t\t: "<<ktp1.Nama<<endl; 
+	cout<<"Tempat/Tgl Lahir	: "<<ktp1.Tempat_Tgl_Lahir<<endl;
+	cout<<"Jenis Kelamin\t	: "<<ktp1.Jenis_Kelamin<<endl;
+	cout<<"Alamat			: "<<ktp1.Alamat<<endl;
+	cout<<"\tRT/RW		: "<<ktp1.Rt_Rw<<endl;
+	cout<<"\tKel/Desa	: "<<ktp1.Kel_Desa<<endl;
+	cout<<"\tKecamatan	: "<<ktp1.Kecamatan<<endl;
+	cout<<"Agama			: "<<ktp1.Agama<<endl;
+	cout<<"Status Perkawinan\t: "<<ktp1.St_pk<<endl;
+	cout<<"Pekerjaan\t	: "<<ktp1.Pekerjaan<<endl;
+	cout<<"Kewarganegaraan\t	: "<<ktp1.Kewarganegaraan<<endl;
+	cout<<"Berlaku Hingga\t	: SEUMUR HIDUP";
+	getch();
+}
